@@ -1,0 +1,31 @@
+package tk.gent1emen.whatsmyname.Quitfake
+
+package tk.gent1emen.whatsmyname;
+ 
+import java.util.logging.Logger;
+import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.plugin.java.JavaPlugin;
+ 
+public class Quitfake extends JavaPlugin {
+
+else if (cmd.getName().equalsIgnoreCase("quitfake")) {
+if (args.length > 1) {
+sender.sendMessage(ChatColor.RED + "Usage: /quitfake (Player)");
+if (args.length < 1) {
+sender.sendMessage(ChatColor.RED + "Usage: /quitfake (Player)");
+return false;
+}
+this.getServer().broadcastMessage(ChatColor.YELLOW + args[0] + " left the game.");
+sender.sendMessage(ChatColor.RED + "Successfully executed. See chat.");
+if(sender instanceof Player){
+sender.sendMessage("Your name is "+((Player)sender).getDisplayName());
+return true;
+}
+}
+}
+return false;
+}
+}
