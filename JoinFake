@@ -1,0 +1,25 @@
+package tk.gent1emen.whatsmyname.JoinFake
+
+import org.bukkit.ChatColor;
+import java.util.logging.Logger;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class JoinFake extends JavaPlugin {
+
+public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){
+if(cmd.getName().equalsIgnoreCase("joinfake")){
+if (args.length > 1) {
+sender.sendMessage(ChatColor.RED + "Usage: /joinfake (Player)");
+return false;
+}
+if (args.length < 1) {
+sender.sendMessage(ChatColor.RED + "Usage: /joinfake (Player)");
+return false;
+}
+this.getServer().broadcastMessage(ChatColor.YELLOW + args[0] + " joined the game.");
+sender.sendMessage(ChatColor.RED + "Successfully executed. See chat.");
+return true;
+}
