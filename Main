@@ -1,0 +1,21 @@
+package tk.gent1emen.whatsmyname;
+ 
+import java.util.logging.Logger;
+import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.plugin.java.JavaPlugin;
+ 
+public class Main extends JavaPlugin {
+ 
+Logger log;
+ 
+public void onEnable(){
+log = this.getLogger();
+log.info("Fakes version 1.0 has been enabled.");
+}
+ 
+public void onDisable(){
+log.info("Fakes version 1.0 has been enabled.");
+}
